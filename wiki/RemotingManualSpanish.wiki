@@ -1,0 +1,6 @@
+#summary Remoting manual.
+
+= Remoting manual =
+You can find information about .NET Remoting in the following link:
+
+* http://www.eridem.net/programacion-con-c-y-net-remoting-mono-remoting-i/
