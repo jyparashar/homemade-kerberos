@@ -1,0 +1,34 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
+  <MonoDevelop.Ide.DebuggingService>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ShareClasses/TGT.cs" ctype="Workbench">
+    <Files>
+      <File FileName="Workstation/Main.cs" Line="1" Column="1" />
+      <File FileName="KDC/KDC.cs" Line="48" Column="39" />
+      <File FileName="ShareClasses/KRB_AS_REP.cs" Line="11" Column="4" />
+      <File FileName="ShareClasses/IKDC.cs" Line="20" Column="25" />
+      <File FileName="KDC/Main.cs" Line="1" Column="1" />
+      <File FileName="ShareClasses/Key.cs" Line="39" Column="44" />
+      <File FileName="KDC/KDC.exe.config" Line="7" Column="41" />
+      <File FileName="ShareClasses/MySQLQueries.cs" Line="41" Column="34" />
+      <File FileName="ShareClasses/TGT.cs" Line="34" Column="23" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="KDC" expanded="True" />
+          <Node name="ShareClasses" expanded="True">
+            <Node name="References" expanded="True" />
+            <Node name="TGT.cs" selected="True" />
+          </Node>
+          <Node name="Workstation" expanded="True" />
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
