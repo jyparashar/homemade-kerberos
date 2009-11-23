@@ -17,6 +17,6 @@ namespace ShareClasses
 		/// <param name="tgt">
 		/// A <see cref="TGT"/>
 		/// </param>
-		void AS(User u, out SessionKey sk, out TGT tgt);
+		KRB_AS_REP AS(User u);
 	}
 }
