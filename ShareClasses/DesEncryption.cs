@@ -7,26 +7,22 @@ using System.Collections.Generic;
 
 namespace ShareClasses
 {
-	public class ObjectDESEncryption
+	public class DesEncryption
 	{		
-		public ObjectDESEncryption()
+		public static byte[] EncryptObject(Object obj, Key key)
 		{
-		}
-		
-		public byte[] EncryptObject(Object obj, Key key)
-		{
-			return this.ObjectToByteArray(obj);
+			return ObjectToByteArray(obj);
 			//return this.EncryptByteArray(this.ObjectToByteArray(obj), key);	
 		}
 		
-		public Object DecryptObject(byte[] bytes, Key key)
+		public static Object DecryptObject(byte[] bytes, Key key)
 		{
-			return this.ByteArrayToObject(bytes);
+			return ByteArrayToObject(bytes);
 			//return this.ByteArrayToObject(this.DecryptByteArray(bytes, key));
 		}
 				
 		// Convert an object to a byte array
-		private byte[] ObjectToByteArray(Object obj)
+		private static byte[] ObjectToByteArray(Object obj)
 		{
 		    if(obj == null)
 		        return null;
@@ -37,7 +33,7 @@ namespace ShareClasses
 		}
 		
 		// Convert a byte array to an Object
-		private Object ByteArrayToObject(byte[] arrBytes)
+		private static Object ByteArrayToObject(byte[] arrBytes)
 		{
 		    MemoryStream memStream = new MemoryStream();
 		    BinaryFormatter binForm = new BinaryFormatter();
@@ -47,7 +43,7 @@ namespace ShareClasses
 		    return obj;
 		}
 		
-		private byte[] EncryptByteArray(byte[] bytes, Key key)
+		private static byte[] EncryptByteArray(byte[] bytes, Key key)
 		{
 			MemoryStream ms = new MemoryStream();
 			
@@ -64,7 +60,7 @@ namespace ShareClasses
 			return encU1;
 		}
 			
-		private byte[] DecryptByteArray(byte[] bytes, Key key)
+		private static byte[] DecryptByteArray(byte[] bytes, Key key)
 		{
 			// TODO
 			return new byte[1];	

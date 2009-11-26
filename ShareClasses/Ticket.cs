@@ -19,18 +19,18 @@ namespace ShareClasses
 			tne.from = from;
 			tne.shareKeys = shareKeys;
 			
-			this.encrypted = new ObjectDESEncryption().EncryptObject(tne, key);
+			this.encrypted = DesEncryption.EncryptObject(tne, key);
 		}
 		
 		public User GetFrom(Key key)
 		{
-			Ticket_NoEncrypted ticket_noEncrypted = (Ticket_NoEncrypted) new ObjectDESEncryption().DecryptObject(this.encrypted, key);
+			Ticket_NoEncrypted ticket_noEncrypted = (Ticket_NoEncrypted) DesEncryption.DecryptObject(this.encrypted, key);
 			return ticket_noEncrypted.from;
 		}
 		
 		public Key ShareKeys(Key key)
 		{
-			Ticket_NoEncrypted ticket_noEncrypted = (Ticket_NoEncrypted) new ObjectDESEncryption().DecryptObject(this.encrypted, key);
+			Ticket_NoEncrypted ticket_noEncrypted = (Ticket_NoEncrypted) DesEncryption.DecryptObject(this.encrypted, key);
 			return ticket_noEncrypted.shareKeys;
 		}
 	}

@@ -4,7 +4,7 @@ using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Http;
 
-namespace KDC
+namespace Kdc
 {
 	class MainClass
 	{

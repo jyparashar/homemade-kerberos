@@ -34,7 +34,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="KDC.cs" />
+    <Compile Include="Kdc.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShareClasses\ShareClasses.csproj">
@@ -43,7 +43,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="KDC.exe.config">
+    <None Include="Kdc.exe.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
