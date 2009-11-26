@@ -43,6 +43,10 @@
     <Compile Include="KRB_AS_REP.cs" />
     <Compile Include="Key.cs" />
     <Compile Include="MySQLQueries.cs" />
+    <Compile Include="ObjectDESEncryption.cs" />
+    <Compile Include="Authenticator.cs" />
+    <Compile Include="Ticket.cs" />
+    <Compile Include="KRB_TGS_REP.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
