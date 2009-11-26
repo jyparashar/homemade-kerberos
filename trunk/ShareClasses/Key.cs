@@ -5,7 +5,7 @@ namespace ShareClasses
 {	
 	public class Key
 	{
-		private int size = 128;
+		private int size = 8;
 		private string key = "";
 		
 		public string KeyString

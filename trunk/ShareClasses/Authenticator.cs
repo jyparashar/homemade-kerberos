@@ -11,12 +11,12 @@ namespace ShareClasses
 		{
 			DateTime now = DateTime.Now;
 			
-			this.encrypted = new ObjectDESEncryption().EncryptObject(now, key);
+			this.encrypted = DesEncryption.EncryptObject(now, key);
 		}
 		
 		public DateTime GetTimestamp(Key key)
 		{
-			return (DateTime)new ObjectDESEncryption().DecryptObject(this.encrypted, key);	
+			return (DateTime) DesEncryption.DecryptObject(this.encrypted, key);	
 		}
 	}
 }

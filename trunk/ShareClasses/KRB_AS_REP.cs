@@ -6,29 +6,29 @@ namespace ShareClasses
 	{
 		private class KRB_AS_REP_NoEncrypted
 		{
-			public Key sa;
-			public TGT tgt;
+			public Key ks_a;
+			public Tgt tgt;
 		}
 		private byte[] encrypted;
 		
-		public KRB_AS_REP(Key ka, Key sa, TGT tgt)
+		public KRB_AS_REP(Key k_a, Key ks_a, Tgt tgt)
 		{
 			KRB_AS_REP_NoEncrypted noEncrypt = new KRB_AS_REP_NoEncrypted();
-			noEncrypt.sa = sa;
+			noEncrypt.ks_a = ks_a;
 			noEncrypt.tgt = tgt;
 			
-			this.encrypted = new ObjectDESEncryption().EncryptObject(noEncrypt, ka);
+			this.encrypted = DesEncryption.EncryptObject(noEncrypt, k_a);
 		}
 		
-		public Key GetSA(Key key)
+		public Key GetKS_A(Key key)
 		{
-			KRB_AS_REP_NoEncrypted noEncrypt = (KRB_AS_REP_NoEncrypted)new ObjectDESEncryption().DecryptObject(this.encrypted, key);	
-			return noEncrypt.sa;
+			KRB_AS_REP_NoEncrypted noEncrypt = (KRB_AS_REP_NoEncrypted) DesEncryption.DecryptObject(this.encrypted, key);	
+			return noEncrypt.ks_a;
 		}
 		
-		public TGT GetTGT(Key key)
+		public Tgt GetTGT(Key key)
 		{
-			KRB_AS_REP_NoEncrypted noEncrypt = (KRB_AS_REP_NoEncrypted)new ObjectDESEncryption().DecryptObject(this.encrypted, key);	
+			KRB_AS_REP_NoEncrypted noEncrypt = (KRB_AS_REP_NoEncrypted) DesEncryption.DecryptObject(this.encrypted, key);	
 			return noEncrypt.tgt;
 		}
 	}

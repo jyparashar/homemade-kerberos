@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KDC", "KDC\KDC.csproj", "{A21C5659-CFE6-4DBC-BA48-C1BF8403E696}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kdc", "KDC\Kdc.csproj", "{A21C5659-CFE6-4DBC-BA48-C1BF8403E696}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareClasses", "ShareClasses\ShareClasses.csproj", "{02A10586-EBDC-486D-B2FB-60EB0271B065}"
 EndProject
