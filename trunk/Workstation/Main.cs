@@ -20,11 +20,10 @@ namespace Workstation
 			RemotingConfiguration.Configure(Application.ExecutablePath + ".config", false);			
 			IKDC kdc = (IKDC)Activator.GetObject(typeof(ShareClasses.IKDC), url);
 			
-			User alice = new User("Alice");
-			SessionKey sk = null;
-			TGT tgt = null;			
-			kdc.AS(alice, out sk, out tgt);			
-			Console.WriteLine(sk.test + " - " + tgt.test);
+			User alice = new User("Alice");		
+			KRB_AS_REP krb_as_rep = kdc.AS(alice);
+			
+			kdc
 		}
 	}
 }

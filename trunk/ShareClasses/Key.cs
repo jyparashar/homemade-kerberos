@@ -2,9 +2,7 @@
 using System;
 
 namespace ShareClasses
-{
-	
-	
+{	
 	public class Key
 	{
 		private int size = 128;

@@ -3,27 +3,30 @@
   <MonoDevelop.Ide.DebuggingService>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService>
-  <MonoDevelop.Ide.Workbench ActiveDocument="ShareClasses/TGT.cs" ctype="Workbench">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Workstation/Main.cs" ctype="Workbench">
     <Files>
-      <File FileName="Workstation/Main.cs" Line="1" Column="1" />
-      <File FileName="KDC/KDC.cs" Line="48" Column="39" />
-      <File FileName="ShareClasses/KRB_AS_REP.cs" Line="11" Column="4" />
+      <File FileName="Workstation/Main.cs" Line="26" Column="7" />
+      <File FileName="KDC/KDC.cs" Line="91" Column="4" />
+      <File FileName="ShareClasses/KRB_AS_REP.cs" Line="21" Column="4" />
       <File FileName="ShareClasses/IKDC.cs" Line="20" Column="25" />
       <File FileName="KDC/Main.cs" Line="1" Column="1" />
-      <File FileName="ShareClasses/Key.cs" Line="39" Column="44" />
+      <File FileName="ShareClasses/Key.cs" Line="5" Column="2" />
       <File FileName="KDC/KDC.exe.config" Line="7" Column="41" />
+      <File FileName="ShareClasses/Authenticator.cs" Line="1" Column="1" />
       <File FileName="ShareClasses/MySQLQueries.cs" Line="41" Column="34" />
-      <File FileName="ShareClasses/TGT.cs" Line="34" Column="23" />
+      <File FileName="ShareClasses/TGT.cs" Line="21" Column="1" />
+      <File FileName="ShareClasses/ObjectDESEncryption.cs" Line="18" Column="39" />
+      <File FileName="ShareClasses/Ticket.cs" Line="1" Column="1" />
+      <File FileName="ShareClasses/KRB_TGS_REP.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="KDC" expanded="True" />
-          <Node name="ShareClasses" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="TGT.cs" selected="True" />
+          <Node name="ShareClasses" expanded="True" />
+          <Node name="Workstation" expanded="True">
+            <Node name="Main.cs" selected="True" />
           </Node>
-          <Node name="Workstation" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">

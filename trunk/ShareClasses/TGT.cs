@@ -11,27 +11,33 @@ namespace ShareClasses
 	[Serializable]
 	public class TGT
 	{		
-		private User u;
-		private Key sa;
-		
-		public TGT(User u, Key sa)
+		private class TGTNoEncrypted
 		{
-			this.u = u;
-			this.sa = sa;
+			public User u;
+			public Key sa;
 		}
 		
-		public string Encrypt(Key k)
+		private byte[] encrypted;
+		
+		public TGT(Key kdc_key, User u, Key sa)
 		{
-						DES des = new DESCryptoServiceProvider();
-			XmlSerializer serializer = new XmlSerializer(typeof(User));
-			TextWriter tw = new StringWriter();
-			serializer.Serialize(tw, u);
-			/*mySerializer.Serialize(
+			TGTNoEncrypted tgtNoEncrypted = new TGTNoEncrypted();
+			tgtNoEncrypted.u = u;
+			tgtNoEncrypted.sa = sa;
 			
-			// To write to a file, create a StreamWriter object.
-			StreamWriter myWriter = new StreamWriter("myFileName.xml");
-			mySerializer.Serialize(myWriter, myObject);
-			myWriter.Close();*/
+			this.encrypted = new ObjectDESEncryption().EncryptObject(tgtNoEncrypted, kdc_key);
+		}
+		
+		public User GetUser(Key key)
+		{
+			TGTNoEncrypted noEncrypt = (TGTNoEncrypted)new ObjectDESEncryption().DecryptObject(this.encrypted, key);	
+			return noEncrypt.u;
+		}
+		
+		public TGT GetSA(Key key)
+		{
+			TGTNoEncrypted noEncrypt = (TGTNoEncrypted)new ObjectDESEncryption().DecryptObject(this.encrypted, key);	
+			return noEncrypt.sa;
 		}
 	}
 }
