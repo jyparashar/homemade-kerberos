@@ -12,6 +12,12 @@ namespace Workstation
 		{
 			Key aliceKey = new Key("ABCDEFGH");
 			
+			#region Throw our server
+			
+			RemotingConfiguration.Configure(Application.ExecutablePath + ".config", false);	
+			
+			#endregion			
+			
 			#region Connection with server
 			
 			System.Configuration.AppSettingsReader configurationAppSettings =
@@ -24,16 +30,22 @@ namespace Workstation
 			
 			#endregion
 			
-			// AS_REQ
+			#region AS_REQ
+			
 			User alice = new User("Alice");
 			KRB_AS_REQ asReq = new KRB_AS_REQ(alice);
 			KRB_AS_REP asRep = kdc.AS(asReq);
 			
-			// TGS_REQ
+			#endregion
+			
+			#region TGS_REQ
+			
 			User bob = new User("Bob");
 			Authenticator auth = new Authenticator(aliceKey);
 			KRB_TGS_REQ tgsReq = new KRB_TGS_REQ(asRep.GetTGT(aliceKey), auth, bob);
 			KRB_TGS_REP tgsRep = kdc.TGS(tgsReq);
+			
+			#endregion
 		}
 	}
 }

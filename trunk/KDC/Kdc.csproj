@@ -5,9 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{02A10586-EBDC-486D-B2FB-60EB0271B065}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AssemblyName>ShareClasses</AssemblyName>
+    <ProjectGuid>{A21C5659-CFE6-4DBC-BA48-C1BF8403E696}</ProjectGuid>
+    <OutputType>Exe</OutputType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -17,6 +16,7 @@
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AssemblyName>Kdc</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -24,33 +24,29 @@
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AssemblyName>KDC</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="MySql.Data, Version=5.0.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MySql.Data.dll</HintPath>
-    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="IKdc.cs" />
-    <Compile Include="Tgt.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="KRB_AS_REP.cs" />
-    <Compile Include="Key.cs" />
-    <Compile Include="MySQLQueries.cs" />
-    <Compile Include="DesEncryption.cs" />
-    <Compile Include="Authenticator.cs" />
-    <Compile Include="Ticket.cs" />
-    <Compile Include="KRB_TGS_REP.cs" />
-    <Compile Include="KRB_AS_REQ.cs" />
-    <Compile Include="ServiceNames.cs" />
-    <Compile Include="KRB_TGS_REQ.cs" />
-    <Compile Include="KRB_AP_REQ.cs" />
-    <Compile Include="KRB_AP_REP.cs" />
+    <Compile Include="Kdc.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShareClasses\ShareClasses.csproj">
+      <Project>{02A10586-EBDC-486D-B2FB-60EB0271B065}</Project>
+      <Name>ShareClasses</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kdc.exe.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
