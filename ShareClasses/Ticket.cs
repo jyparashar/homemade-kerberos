@@ -28,7 +28,7 @@ namespace ShareClasses
 			return ticket_noEncrypted.from;
 		}
 		
-		public Key ShareKeys(Key key)
+		public Key GetShareKeys(Key key)
 		{
 			Ticket_NoEncrypted ticket_noEncrypted = (Ticket_NoEncrypted) DesEncryption.DecryptObject(this.encrypted, key);
 			return ticket_noEncrypted.shareKeys;
