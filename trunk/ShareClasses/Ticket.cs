@@ -3,8 +3,10 @@ using System;
 
 namespace ShareClasses
 {	
+	[Serializable]
 	public class Ticket
 	{
+		[Serializable]
 		private class Ticket_NoEncrypted
 		{
 			public User from;

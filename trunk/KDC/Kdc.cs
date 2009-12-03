@@ -3,7 +3,6 @@ using System.Data;
 using System.Configuration;
 using ShareClasses;
 
-
 namespace Kdc
 {	
 	public class Kdc : System.MarshalByRefObject, ShareClasses.IKdc
@@ -27,12 +26,17 @@ namespace Kdc
 				ConfigurationSettings.AppSettings["db_host"], ConfigurationSettings.AppSettings["db_db"],
 				ConfigurationSettings.AppSettings["db_user"], ConfigurationSettings.AppSettings["db_pass"]);
 			mysql.OpenConnection();
-			IDataReader reader = mysql.Select("SELECT key FROM " + ConfigurationSettings.AppSettings["db_pass"] + " WHERE user=\"" + u.Name + "\"");
+			string sqlq = "SELECT `key` FROM `" + ConfigurationSettings.AppSettings["db_tb_users"] + "` WHERE `user`=\"" + u.Name + "\";";
+			IDataReader reader = mysql.Select(sqlq);
 			reader.Read();
 			Key k_a = new Key((string) reader["key"]);
 			mysql.CloseConnection();
 			
 			return k_a;
+			
+			// Possible exceptions:
+			// - User doesn't exists
+			// - MySQL connexion problem
 		}
 		
 		public KRB_AS_REP AS(KRB_AS_REQ req)

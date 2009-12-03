@@ -2,8 +2,10 @@ using System;
 
 namespace ShareClasses
 {	
+	[Serializable]
 	public class KRB_AS_REP
 	{
+		[Serializable]
 		private class KRB_AS_REP_NoEncrypted
 		{
 			public Key ks_a;

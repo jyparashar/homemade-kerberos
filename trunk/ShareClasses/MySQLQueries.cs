@@ -4,6 +4,7 @@ using MySql.Data.MySqlClient;
 
 namespace ShareClasses
 {
+	[Serializable]
 	public class MySQLQueries
 	{		
 		private IDbConnection dbcon;

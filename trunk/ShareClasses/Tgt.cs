@@ -11,6 +11,7 @@ namespace ShareClasses
 	[Serializable]
 	public class Tgt
 	{		
+		[Serializable]
 		private class TgtNoEncrypted
 		{
 			public User u;

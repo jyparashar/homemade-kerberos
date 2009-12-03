@@ -12,7 +12,7 @@ namespace Kdc
 		{					
 			RemotingConfiguration.Configure(Application.ExecutablePath + ".config", false);	
 			
-			Console.WriteLine("KDC Started.");
+			Console.WriteLine("KDC Started.\nPress ENTER key to finish.");
 			Console.ReadLine();
 		}
 	}

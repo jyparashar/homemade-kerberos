@@ -3,6 +3,7 @@ using System;
 
 namespace ShareClasses
 {	
+	[Serializable]
 	public class Key
 	{
 		private int size = 8;

@@ -2,8 +2,7 @@
 using System;
 
 namespace ShareClasses
-{
-	
+{	
 	[Serializable]
 	public class User
 	{		

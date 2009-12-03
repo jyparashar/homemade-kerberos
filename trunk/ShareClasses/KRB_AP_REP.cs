@@ -2,9 +2,8 @@
 using System;
 
 namespace ShareClasses
-{
-	
-	
+{	
+	[Serializable]
 	public class KRB_AP_REP
 	{
 		private byte[] encrypted;

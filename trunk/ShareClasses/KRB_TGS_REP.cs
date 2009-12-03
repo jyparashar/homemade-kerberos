@@ -3,8 +3,10 @@ using System;
 
 namespace ShareClasses
 {	
+	[Serializable]
 	public class KRB_TGS_REP
 	{
+		[Serializable]
 		private class KRB_TGS_REP_NoEncrypted
 		{
 			public User reqUser;
