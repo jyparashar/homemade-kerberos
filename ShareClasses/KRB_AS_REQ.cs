@@ -2,6 +2,7 @@ using System;
 
 namespace ShareClasses
 {	
+	[Serializable]
 	public class KRB_AS_REQ
 	{
 		private int krbVersion = 4;

@@ -1,6 +1,7 @@
 using System;
 using ShareClasses;
 
+
 namespace Workstation
 {	
 	public class Server : MarshalByRefObject
@@ -14,6 +15,8 @@ namespace Workstation
 		
 		public KRB_AP_REP AP(KRB_AP_REQ req)
 		{
+			Console.WriteLine("KRB_AP_REP");
+			
 			// Decrypt ticket to get K_AB
 			Key k_ab = req.Ticket.GetShareKeys(this.workstationKey);
 		
